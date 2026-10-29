@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="happy-btn" class="emoji-btn" aria-label="Happy face emoji">
+        <span role="img" aria-hidden="true">😊</span>
+        <span class="count">0/10</span>
+        
+    </button>
+    <script >
+        const happyBtn = document.querySelector('#happy-btn')
+        happyBtn.addEventListener('click', () => {
+            //const btn = document.querySelector(".count")
+            
+
+
+            /*function updateCount(btn) {
+                const countEl = btn.querySelector(".count");
+                let currCount = +countEl.textContent.split("/")[0];
+
+                if (currCount === 10) return;
+
+                currCount++;
+                countEl.textContent = `${currCount}/10`;
+            }
+
+            const happyBtn = document.querySelector("#happy-btn");*/
+       })
+        function getButton (btn) {
+            
+            let curr = Number(btn.textContent.split("/")[0])
+            if(curr === 10) return;
+            curr ++;
+            btns.textContent = `${curr}/10`
+                
+            
+            //let name2 = Number(name)
+            
+            //console.log(btn)
+        }
+        const btns = btn.querySelector(".count")
+        /*   
+       let name = "0/10"
+       let name1 = name.split("/")
+       let name2 = Number(name1[0])
+       if (name2 < 10) {
+        name2 += 1
+
+       }
+       console.log(name2)
+       */
+
+          </script>
+</body>
+</html>
