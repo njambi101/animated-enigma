@@ -1,8 +1,6 @@
+import "./app.css"
 import { useState } from 'react'
-import heroImg from './assets/hero.png'
-import reactLogo from './assets/react.svg'
-import viteLogo from './assets/vite.svg'
-import './App.css'
+import header from './headee.jsx'
 
 function App(props) {
   const btnStyle = {
@@ -36,7 +34,8 @@ function App(props) {
       width={100}
       height={100}/>
       <p>what is going on nere</p>
-      <h2>this is button</h2>
+      <h2 className="bg bg-primary"       
+      >this is button</h2>
     </div>
         </>
         
