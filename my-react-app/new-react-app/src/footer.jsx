@@ -1,7 +1,10 @@
 export default function Footer(){
+
+    const year = new Date().getFullYear()
+
     return (
         <footer className="fixed-bottom">
-            &copy; goodgrooves 2026
+            &copy; goodgroove {year}
         </footer>
     )
 }

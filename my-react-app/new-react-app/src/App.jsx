@@ -11,10 +11,12 @@ const products = [
 ]
 
 function App() {
+  
   const [filter, setFilter] = useState('')
   const filteredProduct = filter ? products.filter((product) => product.category === filter) : products
   
   return (
+    <>
     <div>
       <h1>ShopEase Product Catelog</h1>
       <button onClick={() => setFilter('Electronics')}>Electronics</button>
@@ -26,7 +28,10 @@ function App() {
           <ProductCard key={product.id} product={product} />
         ))}
       </div>
+
     </div>
+    <Footer/>
+    </>
   )
    
 }
