@@ -1,7 +1,7 @@
 import Headers from './header'
 import Footer from './footer'
 import './App.css'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 
 function App() {
     const [num, setNum] = useState(0)
@@ -15,13 +15,43 @@ function App() {
     const [check, setCheck] = useState(true)
 
     const [color, setColor] = useState('red')
-
     
+   const [car, setCar] = useState(
+    {
+      brand : "ferrari",
+      color : "blue",
+      year : "2002"
+    }
+   )
+   
+   const [darkMode, setDarkMode] = useState(() => {
+    return localStorage.getItem("theme") === "dark";
+   })
+   
+   useEffect(() => {
+    if(darkMode){
+      document.body.classList.add('dark')
+      localStorage.setItem("theme", "dark")
+
+    } else {
+      document.body.classList.remove("dark")
+      localStorage.setItem("theme", "light")
+    }
+   })
   return (
     <>
+    <div className="app">
+      <h1>{darkMode ? "Dark Mode" : "light Mode"}</h1>
+      <button onClick={() => setDarkMode(!darkMode)}>
+        Toggle Dark Mode
+      </button>
+    </div>
     <Headers/>
     <main>
-      <p onChange={() => ()}>how are you</p>
+      <p>it is a {car.brand} from {car.year} with {car.color}.</p>
+      <button >cr</button>
+     <p>My color is {color}</p>
+     <button onClick={() => setColor('blue')}>change color</button>
       <h1>REACTECH SOLUTIONS</h1>
       <p>We React to Your, Building Tomorrow's Interfaces Today.</p>
       <h1>{num}</h1>

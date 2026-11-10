@@ -1,1 +1,23 @@
 @import url('https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css')
+
+body {
+    transition: background-color 0.3s, color 0.3s;
+    background-color: white;
+    color: black;
+}
+
+body.dark {
+    background-color: #121212;
+    color: white;
+}
+
+.app {
+    text-align: center;
+    margin-top: 20%;
+}
+
+button {
+    padding: 10px 20px;
+    cursor: pointer;
+    margin-top: 20px;
+}
